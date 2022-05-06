@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  border: 1px solid red;
 }
 
 body {
@@ -13,7 +14,7 @@ nav {
   justify-content: space-around;
   background-color: #fff;
   align-items: center;
-  height: fit-content;
+  /* height: fit-content; */
   z-index: 1;
   position: fixed;
   display: flex;
@@ -60,9 +61,20 @@ nav ul li a:hover ~ .nav_effect {
 button {
   background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
   border-radius: 3rem;
-  padding: 0.6rem 1.4rem;
-  color: #fff !important;
+  height: fit-content;
   border: unset;
+}
+
+button a {
+  border-radius: 3rem;
+  color: #fff !important;
+  padding: 0.6rem 1.4rem;
+  text-decoration: none;
+  display: block;
+}
+
+button a:hover {
+  background-color: hsl(136, 65%, 51%);
 }
 
 #hero_section {
