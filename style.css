@@ -7,6 +7,7 @@
 
 body {
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 nav {
@@ -45,11 +46,12 @@ button {
 }
 
 #hero_section {
-  background: url(./images/bg-intro-desktop.svg);
-  background-size: 60rem 60rem; /*width height */
+  /* background-size: 60rem 60rem;
   background-position: 40rem -11rem;
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-repeat: no-repeat; */
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .hero_content {
@@ -58,6 +60,7 @@ button {
   left: 7%;
   padding: 3rem;
   text-align: left;
+  white-space: nowrap;
   width: fit-content;
 }
 
@@ -73,6 +76,25 @@ button {
 .hero_content p {
   margin: 1.3rem 0;
   width: fit-content;
+}
+
+.hero_img {
+  position: relative;
+  top: -9rem;
+  right: 2rem;
+}
+
+.phone_bg {
+  position: relative;
+  width: 150%;
+  height: 110%;
+}
+
+.phones_img {
+  position: absolute;
+  width: 100%;
+  top: 6rem;
+  right: -8rem;
 }
 
 #about_section {
@@ -233,4 +255,15 @@ footer a {
 .second_footer_grid p {
   opacity: 0.5;
   font-size: 0.9rem;
+  background-color: #33d35e;
+  background-color: #2ab6d9;
+  background-color: #2d314d;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
