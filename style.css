@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 body {
@@ -14,8 +14,7 @@ nav {
   justify-content: space-around;
   background-color: #fff;
   align-items: center;
-  /* height: fit-content; */
-  z-index: 1;
+  z-index: 99;
   position: fixed;
   display: flex;
   width: 100vw;
@@ -58,6 +57,11 @@ nav ul li a:hover ~ .nav_effect {
   transition-timing-function: ease-in-out;
 }
 
+.nav_btn {
+  position: relative;
+  right: 2rem;
+}
+
 button {
   background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
   border-radius: 3rem;
@@ -74,22 +78,22 @@ button a {
 }
 
 #hero_section {
-  /* background-size: 60rem 60rem;
-  background-position: 40rem -11rem;
-  background-repeat: no-repeat; */
-  height: 90vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin-top: 3rem;
+  height: 93vh;
+  display: flex;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
 }
 
 .hero_content {
   position: relative;
-  top: 11rem;
+  top: 8rem;
   left: 7%;
   padding: 3rem;
   text-align: left;
   width: fit-content;
   height: fit-content;
+  background: transparent;
 }
 
 .hero_content h1 {
@@ -99,30 +103,43 @@ button a {
   font-size: 2.5rem;
   font-weight: 100;
   opacity: 0.7;
+  white-space: nowrap;
 }
 
 .hero_content p {
   margin: 1.3rem 0;
   width: fit-content;
+  z-index: 3;
 }
 
 .hero_img {
+  /* background-color: blue; */
+  float: right;
+  background: transparent;
+  /* z-index: 97;
   position: relative;
   top: -9rem;
-  right: 2rem;
+  right: 2rem; */
 }
 
 .phone_bg {
+  /* position: relative;
+  width: 100%;
+  height: 49rem; */
+  width: 50vw;
+  height: 90vh;
   position: relative;
-  width: 150%;
-  height: 110%;
+  object-fit: cover;
+  object-position: 40% 40%;
 }
 
 .phones_img {
-  position: absolute;
-  width: 100%;
-  top: 6rem;
-  right: -8rem;
+  /* position: absolute;
+  width: 80%;
+  top: 6.4rem;
+  right: -8.7rem; */
+  width: 5rem;
+  position: relative;
 }
 
 #about_section {
@@ -143,6 +160,8 @@ button a {
   padding: 2rem 0;
   opacity: 0.7;
   width: fit-content;
+  font-size: 1.3vw;
+  min-width: 1rem;
 }
 
 .about_grid {
@@ -153,6 +172,17 @@ button a {
   width: fit-content;
   opacity: 0.9;
   place-items: center;
+}
+
+.about_grid div {
+  border: 1px solid green;
+  height: 16rem;
+}
+
+@media screen and (max-width: 400px) {
+  .about_grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .about_grid p {
@@ -304,3 +334,5 @@ footer a:hover {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/* Media queries*/
