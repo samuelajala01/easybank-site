@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 body {
@@ -89,7 +89,6 @@ button a {
 .hero_text {
   position: relative;
   top: 8rem;
-  left: 4%;
   padding: 3rem;
   text-align: left;
   height: fit-content;
@@ -104,7 +103,6 @@ button a {
   font-weight: 100;
   opacity: 0.7;
   letter-spacing: 0.2rem;
-  white-space: nowrap;
 }
 
 .hero_text p {
@@ -170,8 +168,7 @@ button a {
 }
 
 .about_grid div {
-  border: 1px solid green;
-  height: 20rem;
+  height: 18rem;
   width: 60%;
   min-width: 10rem;
 }
@@ -238,10 +235,17 @@ button a {
 }
 
 .article {
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.article {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
   background-color: #fff;
+  box-shadow: 2px 2px 5px gray;
+  height: 28rem;
 }
 
 .article_img,
@@ -323,7 +327,6 @@ footer a:hover {
 
 .footer_links a {
   color: #fff;
-  width: fit-content;
   display: block;
   text-decoration: none;
   font-size: 0.8rem;
@@ -349,9 +352,53 @@ footer a:hover {
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding: 1rem 0;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: #33d35e;
 }
 
 /* Media queries*/
+@media (max-width: 920px) {
+  #article_section {
+    padding: 2rem;
+  }
+
+  .articles_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer_content {
+    display: block;
+    text-align: center;
+  }
+  .footer_content div {
+    display: block;
+    padding: none;
+    grid-template-columns: 1fr;
+  }
+  .second_footer_grid {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .social_icons {
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .articles_container {
+    display: grid;
+  }
+}
+
+@media (max-width: 510px) {
+  .articles_container {
+    display: block;
+  }
+  .article {
+    height: 26rem;
+  }
+}
