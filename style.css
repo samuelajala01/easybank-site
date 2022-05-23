@@ -7,17 +7,22 @@
 
 body {
   font-size: 18px;
+  /* width: 100vw; */
 }
 
 nav {
   justify-content: space-around;
   background-color: #fff;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   display: flex;
   top: 0;
   z-index: 99;
+}
+
+nav span {
+  display: none;
 }
 
 nav ul {
@@ -78,13 +83,10 @@ button a {
 
 #hero_section {
   height: 99vh;
+  margin-top: 3.8rem;
   /* display: grid;
   grid-template-columns: 1fr 1fr; */
 }
-
-/* .hero_content {
-  flex: 1;
-} */
 
 .hero_text {
   position: relative;
@@ -174,6 +176,19 @@ button a {
 }
 
 @media (max-width: 768px) {
+  nav ul {
+    position: relative;
+  }
+
+  .nav_btn {
+    display: none;
+  }
+
+  nav span {
+    display: block;
+    font-size: 2rem;
+  }
+
   .about_grid {
     display: block;
     row-gap: 1rem;
