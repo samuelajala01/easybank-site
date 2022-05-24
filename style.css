@@ -2,42 +2,43 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 body {
   font-size: 18px;
 }
 
-nav {
+.full_nav,
+.mobile_nav {
   justify-content: space-around;
   background-color: #fff;
   align-items: center;
-  width: 100%;
+  width: 99.5vw;
   position: fixed;
   display: flex;
   top: 0;
   z-index: 99;
 }
 
-nav ul {
+.full_nav ul {
   margin-top: 1rem;
   display: flex;
   list-style: none;
 }
 
-nav ul li {
+.full_nav ul li {
   place-items: center;
   text-align: center;
   padding: 0 0.5rem;
 }
 
-nav ul li a {
+.full_nav ul li a {
   text-decoration: none;
   font-size: 0.9rem;
   color: gray;
 }
-nav ul li span {
+.full_nav ul li span {
   display: block;
   margin-top: 1rem;
   width: 3rem;
@@ -45,12 +46,12 @@ nav ul li span {
   border-radius: 0.5rem;
 }
 
-nav ul li a:hover {
+.full_nav ul li a:hover {
   color: #000;
   transition: 0.5s;
 }
 
-nav ul li a:hover ~ .nav_effect {
+.full_nav ul li a:hover ~ .nav_effect {
   background-color: hsl(136, 65%, 51%);
   transition: 0.5s;
   transition-timing-function: ease-in-out;
@@ -76,20 +77,18 @@ button a {
   display: block;
 }
 
-#hero_section {
-  height: 99vh;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
+.mobile_nav {
+  display: none;
 }
 
-/* .hero_content {
-  flex: 1;
-} */
+#hero_section {
+  height: 99vh;
+}
 
 .hero_text {
   position: relative;
-  top: 8rem;
-  padding: 3rem;
+  top: 12rem;
+  left: 5vw;
   text-align: left;
   height: fit-content;
   width: fit-content;
@@ -106,34 +105,8 @@ button a {
 }
 
 .hero_text p {
-  margin: 1.3rem 0;
-  width: fit-content;
+  margin: 1.5rem 0;
 }
-
-/* .hero_img {
-  position: absolute;
-  object-fit: contain;
-  width: 54%;
-  right: 0;
-  top: -8rem;
-  z-index: -1;
-}
-
-.phone_bg {
-  position: relative;
-  width: fit-content;
-  height: 48rem;
-  object-fit: cover;
-}
-
-.phones_img {
-  position: absolute;
-  bottom: unset;
-  top: 6.1rem;
-  width: 88%;
-  object-fit: contain;
-  left: 10.9rem;
-} */
 
 #about_section {
   font-family: "Arial Narrow", Arial, sans-serif;
@@ -169,30 +142,8 @@ button a {
 
 .about_grid div {
   height: 18rem;
-  width: 60%;
+  width: 100%;
   min-width: 10rem;
-}
-
-@media (max-width: 768px) {
-  .about_grid {
-    display: block;
-    row-gap: 1rem;
-  }
-
-  .about_grid div {
-    margin: auto;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .about_grid div h4 {
-    width: 100%;
-  }
-
-  .about_grid div p {
-    margin: auto;
-    font-size: 1.2rem;
-  }
 }
 
 @media screen and (max-width: 400px) {
@@ -389,12 +340,83 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+  .full_nav {
+    display: none;
+  }
+
+  .mobile_nav {
+    display: flex;
+    height: 3.5rem;
+    justify-content: space-between;
+    padding: 0 5vw;
+  }
+
+  .mobile_nav span {
+    font-size: 1.8rem;
+  }
+
+  .hero_text {
+    left: 0;
+    white-space: nowrap;
+    margin: auto;
+    text-align: center;
+  }
+
+  .hero_text h1 {
+    font-size: 8vw;
+    margin: auto;
+  }
+
+  .hero_text p {
+    font-size: 3.8vw;
+  }
+
   .articles_container {
     display: grid;
+  }
+
+  #about_section {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  #about_section h2 {
+    display: flex;
+    margin: auto;
+  }
+  .about_grid {
+    display: block;
+    max-width: 80%;
+    row-gap: 1rem;
+    margin: auto;
+  }
+
+  .about_grid div {
+    margin: auto;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .about_grid div h4 {
+    width: 100%;
+  }
+
+  .about_grid div p {
+    margin: auto;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 510px) {
+  .hero_text {
+    text-align: center;
+  }
+
+  .hero_text button {
+    display: flex;
+    margin: auto;
+  }
   .articles_container {
     display: block;
   }
