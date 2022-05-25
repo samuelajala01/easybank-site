@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -12,7 +11,6 @@
       href="./images/favicon-32x32.png"
     />
     <link href="./style.css" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="./script.js"></script>
 
     <title>Easybank | Next generation digital banking</title>
   </head>
@@ -30,19 +28,19 @@
     </nav>
     <nav class="mobile_nav">
       <img src="./images/logo.svg" />
-      <span class="toggle_on">E</span>
+      <span id="toggle_span"><a href="#" id="toggle_on">E</a></span>
     </nav>
-    <!-- <div class="mobile_show_list">
+    <div class="mobile_show_list">
       <ul>
-        <li><a href="#"> Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Careers</a></li>
+        <li id="mobile_link"><a href="#"> Home</a></li>
+        <li id="mobile_link"><a href="#">About</a></li>
+        <li id="mobile_link"><a href="#">Contact</a></li>
+        <li id="mobile_link"><a href="#">Blog</a></li>
+        <li id="mobile_link"><a href="#">Careers</a></li>
       </ul>
-    </div> -->
+    </div>
 
-    <section id="hero_section">
+    <section id="hero_section" class="section">
       <div class="hero_text">
         <h1>
           Next generation<br />
@@ -202,5 +200,6 @@
         >. Coded by <a href="https://github.com/samuelajala01">Samuel Ajala</a>.
       </div>
     </footer>
+    <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>
